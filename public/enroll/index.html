@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Enroll Now – Sankalp Digital Pathshala | Start Your Premium Offline Journey">
+    <meta name="description" content="Secure your seat in our expert‑led classroom programs. Fill the enrollment form, choose your batch, and begin your path to academic excellence with smart classrooms, premium study materials, and AI‑powered support.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Enroll Now – Sankalp Digital Pathshala">
+    <meta property="og:description" content="Simple and secure enrollment for premium offline coaching. Confirm your seat and schedule a campus visit.">
+    <meta property="og:image" content="https://www.sankalpdigitalpathshala.online/assets/og-enroll.jpg">
+    <meta property="og:url" content="https://www.sankalpdigitalpathshala.online/enroll">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sankalpdigitalpathshala.online/enroll">
+    <title>Enroll Now – Sankalp Digital Pathshala</title>
+    <link rel="stylesheet" href="/assets/style.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s">
+    <style>
+        /* Additional premium styling – does not affect form fields */
+        .enroll-highlight {
+            background: linear-gradient(135deg, var(--primary-light), white);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .step-card {
+            background: var(--off-white);
+            padding: 2rem;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .form-wrapper {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 2.5rem;
+        }
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            flex: 1;
+            min-width: 220px;
+        }
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            display: block;
+            color: var(--navy);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem 0.8rem;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,172,238,0.1);
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/site-upgrade.css?v=1">
+</head>
+<body>
+    <!-- ========== NAVBAR (Consistent) ========== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Sankalp Digital Pathshala Home">
+                <img src="https://sankalpshiksha.com/wp-content/uploads/2025/07/SANKALP-SHIKSHA-N-LOGO-2048x415.png" alt="Sankalp Digital Pathshala Logo" width="160" height="48">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/study-material">Study Material</a></li>
+                <li><a href="/test-series">Test Series</a></li>
+                <li><a href="/results">Results</a></li>
+                <li><a href="/faculty">Faculty</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/ai-assistant" class="btn-primary btn-nav">AI Assistant</a>
+                <a href="https://wa.me/919453961105" target="_blank" rel="noopener" class="btn-whatsapp btn-nav">💬 WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== ENROLL HERO ========== -->
+    <section class="page-hero" style="background: linear-gradient(to bottom, var(--off-white), white);">
+        <div class="container text-center">
+            <h1 class="hero-heading">Enroll in <span class="text-primary">Your Dream Classroom Program</span></h1>
+            <p class="hero-subtitle" style="max-width:700px; margin:0 auto;">Take the first step towards academic excellence. Fill the form below and our team will confirm your seat and schedule a campus visit within hours.</p>
+            <div class="trust-badges mt-3" style="justify-content:center;">
+                <span class="badge">🎓 Expert Faculty</span>
+                <span class="badge">🏫 Smart Classrooms</span>
+                <span class="badge">📚 Premium Material</span>
+                <span class="badge">🤖 24/7 AI Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ENROLLMENT PROCESS STEPS ========== -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Course</h3>
+                    <p>Select the classroom program that fits your goals from our wide range of offerings.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Fill Enrollment Form</h3>
+                    <p>Provide basic details so we can personalise your learning experience.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Visit &amp; Start</h3>
+                    <p>Our team will contact you, confirm your seat, and invite you to the campus for onboarding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ENROLLMENT FORM (UNCHANGED FIELDS) ========== -->
+    <section class="section-padding" style="background: var(--off-white);">
+        <div class="container" style="max-width: 900px;">
+            <div class="form-wrapper">
+                <h2 class="text-center mb-4">Enrollment Form</h2>
+                <div class="enroll-highlight">
+                    <p style="margin:0;"><strong>📍 Campus:</strong> Salemgarh, Tamkuhi, Kushinagar, Uttar Pradesh &nbsp;|&nbsp; <strong>📞</strong> <a href="tel:+919453961105" class="text-primary">+91 9453961105</a></p>
+                </div>
+                <form id="enrollForm">
+                    <!-- Student Details -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentName">Full Name *</label>
+                            <input type="text" id="studentName" placeholder="Your full name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentEmail">Email Address *</label>
+                            <input type="email" id="studentEmail" placeholder="you@example.com" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentMobile">Mobile Number *</label>
+                            <input type="tel" id="studentMobile" placeholder="+91 98765 43210" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentClass">Class / Grade *</label>
+                            <select id="studentClass" required>
+                                <option value="">Select...</option>
+                                <option>Class 6</option><option>Class 7</option><option>Class 8</option>
+                                <option>Class 9</option><option>Class 10</option><option>Class 11</option>
+                                <option>Class 12</option><option>JEE Aspirant</option><option>NEET Aspirant</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Parent Details -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentName">Parent / Guardian Name</label>
+                            <input type="text" id="parentName" placeholder="Parent name">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="Your city">
+                        </div>
+                    </div>
+                    <!-- Course Selection (original options) -->
+                    <div class="form-group">
+                        <label for="courseSelect">Select Course *</label>
+                        <select id="courseSelect" required>
+                            <option value="">-- Choose a program --</option>
+                            <optgroup label="Foundation (Class 6-8)">
+                                <option>Maths Foundation - Class 6</option>
+                                <option>Science Explorer - Class 7</option>
+                                <option>Computer & AI Basics - Class 8</option>
+                            </optgroup>
+                            <optgroup label="Academic Excellence (Class 9-10)">
+                                <option>Complete CBSE Pack - Class 9</option>
+                                <option>Board Booster Program - Class 10</option>
+                                <option>English Excellence - Class 9-10</option>
+                            </optgroup>
+                            <optgroup label="Senior Secondary (Class 11-12)">
+                                <option>PCM (Physics, Chemistry, Maths)</option>
+                                <option>PCB (Physics, Chemistry, Biology)</option>
+                                <option>Commerce & Humanities</option>
+                            </optgroup>
+                            <optgroup label="Competitive Exams">
+                                <option>JEE Main + Advanced</option>
+                                <option>NEET Biology Focus</option>
+                                <option>45-Day JEE/NEET Crash</option>
+                            </optgroup>
+                            <optgroup label="Future Skills">
+                                <option>AI & Machine Learning for Kids</option>
+                                <option>Robotics & IoT</option>
+                                <option>Coding & App Development</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <!-- Additional Message -->
+                    <div class="form-group">
+                        <label for="enrollMessage">Any Message (optional)</label>
+                        <textarea id="enrollMessage" rows="3" placeholder="Tell us about any specific requirements..."></textarea>
+                    </div>
+                    <!-- Consent -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400;">
+                            <input type="checkbox" id="consent" required> I agree to the <a href="/terms" target="_blank" style="color:var(--primary); text-decoration: underline;">Terms & Conditions</a> and <a href="/privacy" target="_blank" style="color:var(--primary); text-decoration: underline;">Privacy Policy</a>.
+                        </label>
+                    </div>
+                    <!-- Submit -->
+                    <button type="submit" class="btn-primary btn-lg w-100" style="width:100%;">Submit Enrollment</button>
+                    <div class="form-feedback mt-3 text-center" id="enrollFeedback" style="display:none;"></div>
+                </form>
+                <p class="text-center mt-3">Prefer WhatsApp? <a href="https://wa.me/919453961105?text=I%20want%20to%20enroll%20in%20a%20course" target="_blank" class="text-primary">Message us instantly →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRUST BADGES & ASSURANCE ========== -->
+    <section class="section-padding bg-white">
+        <div class="container text-center">
+            <h2>Why Enroll with <span class="text-primary">Sankalp Digital Pathshala</span>?</h2>
+            <div class="feature-grid mt-4">
+                <div class="feature-card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Secure Process</h3>
+                    <p>Your data is encrypted and never shared. We respect your privacy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Instant Confirmation</h3>
+                    <p>Receive a confirmation call/WhatsApp within 2-4 hours of submission.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>No Hidden Fees</h3>
+                    <p>Transparent pricing. Pay only after you're satisfied with the counselling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ MINI ========== -->
+    <section class="section-padding" style="background: var(--off-white);">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Enrollment <span class="text-primary">FAQs</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">Is there any registration fee?</button>
+                    <div class="faq-answer"><p>No, filling the enrollment form is completely free. You only pay the course fee after you decide to join.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I change my course later?</button>
+                    <div class="faq-answer"><p>Absolutely! You can switch to a different batch or program within the first week of starting at no extra cost.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How will I receive confirmation?</button>
+                    <div class="faq-answer"><p>We'll contact you via WhatsApp and email. You can also directly call us or visit the campus if you haven't heard back in 4 hours.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s" alt="Logo" width="48" height="48">
+                    <h4>Sankalp Digital Pathshala</h4>
+                    <p>Premium offline coaching, powered by AI. Since 2020.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="/test-series">Test Series</a></li>
+                        <li><a href="/study-material">Study Material</a></li>
+                        <li><a href="/results">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating widgets -->
+    <div class="ai-floating-widget" onclick="location.href='/ai-assistant'">🤖</div>
+    <a href="https://wa.me/919453961105" target="_blank" class="whatsapp-floating">💬</a>
+
+    <!-- Hamburger menu script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+    <!-- Form submission script (unchanged logic) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const enrollForm = document.getElementById('enrollForm');
+            if (enrollForm) {
+                enrollForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const feedback = document.getElementById('enrollFeedback');
+                    feedback.style.display = 'block';
+                    feedback.textContent = 'Submitting your enrollment...';
+                    feedback.style.color = 'var(--slate)';
+                    
+                    const data = {
+                        fullName: document.getElementById('studentName').value.trim(),
+                        email: document.getElementById('studentEmail').value.trim(),
+                        mobile: document.getElementById('studentMobile').value.trim(),
+                        subject: `Enrollment: ${document.getElementById('courseSelect').value}`,
+                        message: `Class: ${document.getElementById('studentClass').value}\nParent: ${document.getElementById('parentName').value || 'N/A'}\nCity: ${document.getElementById('city').value || 'N/A'}\nAdditional: ${document.getElementById('enrollMessage').value || 'None'}`
+                    };
+
+                    try {
+                        const res = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                        const result = await res.json();
+                        if (result.success) {
+                            feedback.textContent = 'Enrollment submitted successfully! Our team will contact you within 2-4 hours to confirm your seat and campus visit.';
+                            feedback.style.color = '#10b981';
+                            enrollForm.reset();
+                        } else {
+                            feedback.textContent = 'Error: ' + (result.error || 'Something went wrong. Please try again.');
+                            feedback.style.color = '#ef4444';
+                        }
+                    } catch (err) {
+                        feedback.textContent = 'Network error. Please try again later.';
+                        feedback.style.color = '#ef4444';
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="/assets/site-upgrade.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Courses – Sankalp Digital Pathshala | Complete Class-wise Programs">
+    <meta name="description" content="Explore our comprehensive offline classroom programs for Classes 6 to 12, JEE, NEET, and future skills. Every subject covered with expert faculty, premium study materials, smart classrooms, test series, and AI‑powered support.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Courses – Sankalp Digital Pathshala">
+    <meta property="og:description" content="Detailed class‑wise and stream‑wise programs. All subjects, all boards – tailored for academic excellence.">
+    <meta property="og:image" content="https://www.sankalpdigitalpathshala.online/assets/og-courses.jpg">
+    <meta property="og:url" content="https://www.sankalpdigitalpathshala.online/courses">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sankalpdigitalpathshala.online/courses">
+    <title>Courses – Sankalp Digital Pathshala</title>
+    <link rel="stylesheet" href="/assets/style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s">
+    <style>
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .subject-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .subject-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .subject-icon {
+            font-size: 2rem;
+        }
+        .subject-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--navy);
+        }
+        .subject-desc {
+            color: var(--slate);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .subject-meta {
+            font-size: 0.8rem;
+            color: var(--slate);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .class-section {
+            margin-bottom: 3rem;
+        }
+        .class-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .class-header h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .class-header span {
+            font-size: 1rem;
+            color: var(--slate);
+            font-weight: 400;
+        }
+        .stream-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .stream-card {
+            background: linear-gradient(135deg, var(--off-white), white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .stream-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .stream-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .stream-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .stream-subjects {
+            color: var(--slate);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/site-upgrade.css?v=1">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Sankalp Digital Pathshala Home">
+                <img src="https://sankalpshiksha.com/wp-content/uploads/2025/07/SANKALP-SHIKSHA-N-LOGO-2048x415.png" alt="Sankalp Digital Pathshala Logo" width="160" height="48">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses" class="active">Courses</a></li>
+                <li><a href="/study-material">Study Material</a></li>
+                <li><a href="/test-series">Test Series</a></li>
+                <li><a href="/results">Results</a></li>
+                <li><a href="/faculty">Faculty</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/ai-assistant" class="btn-primary btn-nav">AI Assistant</a>
+                <a href="https://wa.me/919453961105" target="_blank" rel="noopener" class="btn-whatsapp btn-nav">💬 WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" style="background: linear-gradient(to bottom, var(--off-white), white);">
+        <div class="container">
+            <div class="page-hero-content text-center">
+                <h1 class="hero-heading">Complete Class‑Wise <span class="text-primary">Classroom Programs</span></h1>
+                <p class="hero-subtitle" style="max-width:800px; margin:0 auto;">From foundation to senior secondary and competitive exams, we offer meticulously designed offline batches covering every subject. Experienced faculty, smart classrooms, premium study materials, weekly tests, and AI‑powered support ensure your academic success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CLASS 6-8 FOUNDATION ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-header text-center"><span class="text-primary">🏫 Foundation</span> (Class 6‑8)</h2>
+            <p class="text-center mb-4">Build rock‑solid fundamentals in all major subjects with expert teachers and interactive smart classrooms. Every subject is covered comprehensively, supported by AI‑based practice and regular tests.</p>
+
+            <!-- Class 6 -->
+            <div class="class-section" id="class6">
+                <div class="class-header">
+                    <h3>Class 6</h3>
+                    <span>– Full Year Program</span>
+                </div>
+                <div class="subject-grid">
+                    <div class="subject-card">
+                        <div class="subject-icon">📐</div>
+                        <div class="subject-name">Mathematics</div>
+                        <div class="subject-desc">Arithmetic, geometry, data handling & problem‑solving with puzzles and activities.</div>
+                        <div class="subject-meta"><span>3 sessions/week</span><span>60+ tests</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🔬</div>
+                        <div class="subject-name">Science</div>
+                        <div class="subject-desc">Physics, Chemistry, Biology basics with hands‑on experiments and AI doubt solver.</div>
+                        <div class="subject-meta"><span>2 practical sessions/month</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">📖</div>
+                        <div class="subject-name">English</div>
+                        <div class="subject-desc">Grammar, writing, comprehension & literature. Build communication skills.</div>
+                        <div class="subject-meta"><span>2 sessions/week</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🌍</div>
+                        <div class="subject-name">Social Science</div>
+                        <div class="subject-desc">History, Geography, Civics with project work and map practice.</div>
+                        <div class="subject-meta"><span>1 project/month</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">💻</div>
+                        <div class="subject-name">Computer & AI Basics</div>
+                        <div class="subject-desc">Digital literacy, coding with Scratch, intro to AI, hands‑on lab sessions.</div>
+                        <div class="subject-meta"><span>1 lab session/week</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class 7 -->
+            <div class="class-section" id="class7">
+                <div class="class-header">
+                    <h3>Class 7</h3>
+                    <span>– Full Year Program</span>
+                </div>
+                <div class="subject-grid">
+                    <div class="subject-card">
+                        <div class="subject-icon">📐</div>
+                        <div class="subject-name">Mathematics</div>
+                        <div class="subject-desc">Advanced arithmetic, algebra introduction, geometry, and logical reasoning.</div>
+                        <div class="subject-meta"><span>3 sessions/week</span><span>80+ tests</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🔬</div>
+                        <div class="subject-name">Science</div>
+                        <div class="subject-desc">Physics, Chemistry, Biology with extensive practical experiments and AI‑driven revision.</div>
+                        <div class="subject-meta"><span>2 practical sessions/month</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">📖</div>
+                        <div class="subject-name">English</div>
+                        <div class="subject-desc">Advanced grammar, writing skills, literature analysis, spoken English practice.</div>
+                        <div class="subject-meta"><span>2 sessions/week</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🌍</div>
+                        <div class="subject-name">Social Science</div>
+                        <div class="subject-desc">Deeper understanding of History, Geography, Civics with map work and debates.</div>
+                        <div class="subject-meta"><span>1 project/month</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">💻</div>
+                        <div class="subject-name">Computer & AI</div>
+                        <div class="subject-desc">Coding with Python basics, AI concepts, robotics integration.</div>
+                        <div class="subject-meta"><span>1 lab session/week</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class 8 -->
+            <div class="class-section" id="class8">
+                <div class="class-header">
+                    <h3>Class 8</h3>
+                    <span>– Full Year Program</span>
+                </div>
+                <div class="subject-grid">
+                    <div class="subject-card">
+                        <div class="subject-icon">📐</div>
+                        <div class="subject-name">Mathematics</div>
+                        <div class="subject-desc">Algebra, geometry, mensuration, data handling, and problem‑solving for competitive foundation.</div>
+                        <div class="subject-meta"><span>3 sessions/week</span><span>100+ tests</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🔬</div>
+                        <div class="subject-name">Science</div>
+                        <div class="subject-desc">Physics, Chemistry, Biology with emphasis on conceptual clarity and practical recording.</div>
+                        <div class="subject-meta"><span>2 practicals/month</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">📖</div>
+                        <div class="subject-name">English</div>
+                        <div class="subject-desc">Comprehensive literature, writing, grammar, and public speaking.</div>
+                        <div class="subject-meta"><span>2 sessions/week</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🌍</div>
+                        <div class="subject-name">Social Science</div>
+                        <div class="subject-desc">History, Geography, Civics, Economics awareness with project and group discussions.</div>
+                        <div class="subject-meta"><span>1 project/month</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">💻</div>
+                        <div class="subject-name">Computer & AI</div>
+                        <div class="subject-desc">Python programming, AI projects, data handling, robotics lab.</div>
+                        <div class="subject-meta"><span>1 lab session/week</span></div>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CLASS 9-10 ACADEMIC EXCELLENCE ========== -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-header text-center"><span class="text-primary">📖 Academic Excellence</span> (Class 9‑10)</h2>
+            <p class="text-center mb-4">Board‑focused preparation with in‑depth concept building, daily practice sheets, monthly mock tests, and AI‑powered performance tracking. All core subjects covered.</p>
+
+            <!-- Class 9 -->
+            <div class="class-section" id="class9">
+                <div class="class-header"><h3>Class 9</h3> <span>– Full Year Program</span></div>
+                <div class="subject-grid">
+                    <div class="subject-card">
+                        <div class="subject-icon">📐</div><div class="subject-name">Mathematics</div><div class="subject-desc">Number systems, polynomials, coordinate geometry, linear equations, probability.</div><div class="subject-meta"><span>4 sessions/week</span><span>90+ tests</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🔬</div><div class="subject-name">Science (Physics, Chemistry, Biology)</div><div class="subject-desc">Integrated approach with separate modules for each science, practical labs.</div><div class="subject-meta"><span>3 theory + 1 lab/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">📖</div><div class="subject-name">English</div><div class="subject-desc">Prose, poetry, grammar, writing tasks, and speaking skills.</div><div class="subject-meta"><span>2 sessions/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🌍</div><div class="subject-name">Social Science (History, Geography, Pol. Science, Economics)</div><div class="subject-desc">All four components with map work, project, and regular assessment.</div><div class="subject-meta"><span>3 sessions/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">💻</div><div class="subject-name">Computer Applications / IT</div><div class="subject-desc">Office tools, HTML, Python basics, cyber safety. Practical lab sessions.</div><div class="subject-meta"><span>1 session/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class 10 -->
+            <div class="class-section" id="class10">
+                <div class="class-header"><h3>Class 10</h3> <span>– Board Booster Program</span></div>
+                <div class="subject-grid">
+                    <div class="subject-card">
+                        <div class="subject-icon">📐</div><div class="subject-name">Mathematics</div><div class="subject-desc">Real numbers, polynomials, quadratic equations, arithmetic progression, trigonometry, coordinate geometry, statistics & probability.</div><div class="subject-meta"><span>4 sessions/week</span><span>120+ tests</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🔬</div><div class="subject-name">Science (Physics, Chemistry, Biology)</div><div class="subject-desc">Extensive theory, numerical practice, NCERT focus, lab work, and board pattern mock tests.</div><div class="subject-meta"><span>3 theory + 1 lab/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">📖</div><div class="subject-name">English</div><div class="subject-desc">First Flight, Footprints without Feet, grammar, writing skills, unseen passage strategies.</div><div class="subject-meta"><span>2 sessions/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">🌍</div><div class="subject-name">Social Science (History, Geography, Pol. Science, Economics)</div><div class="subject-desc">Complete syllabus with map work, project, previous year questions, and answer writing practice.</div><div class="subject-meta"><span>3 sessions/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="subject-card">
+                        <div class="subject-icon">💻</div><div class="subject-name">Computer Applications / IT</div><div class="subject-desc">Advanced HTML, CSS, networking, cyber ethics, project work.</div><div class="subject-meta"><span>1 session/week</span></div><a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CLASS 11-12 SENIOR SECONDARY ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-header text-center"><span class="text-primary">🎓 Senior Secondary</span> (Class 11‑12)</h2>
+            <p class="text-center mb-4">Stream‑wise expert coaching with comprehensive coverage of every subject. Small batches, weekly tests, AI analytics, and dedicated mentorship ensure top board and competitive exam results.</p>
+
+            <!-- Class 11 -->
+            <div class="class-section" id="class11">
+                <div class="class-header"><h3>Class 11</h3> <span>– Stream‑wise Full Year Programs</span></div>
+                <div class="stream-grid">
+                    <div class="stream-card">
+                        <div class="stream-icon">🧪</div>
+                        <div class="stream-name">PCM Stream</div>
+                        <div class="stream-subjects">Physics, Chemistry, Mathematics + English</div>
+                        <p>JEE‑aligned syllabus, numerical solving, smart lab sessions, 5 classes/week.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">🧬</div>
+                        <div class="stream-name">PCB Stream</div>
+                        <div class="stream-subjects">Physics, Chemistry, Biology + English</div>
+                        <p>NEET‑focused approach, extensive diagram practice, NCERT drill, 5 classes/week.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">💼</div>
+                        <div class="stream-name">Commerce Stream</div>
+                        <div class="stream-subjects">Accountancy, Business Studies, Economics, English</div>
+                        <p>Concept clarity, project guidance, board pattern tests, 4 classes/week.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">📜</div>
+                        <div class="stream-name">Humanities Stream</div>
+                        <div class="stream-subjects">History, Political Science, Geography, Economics, English</div>
+                        <p>Detailed explanations, map work, answer writing, current affairs integration.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class 12 -->
+            <div class="class-section" id="class12">
+                <div class="class-header"><h3>Class 12</h3> <span>– Board + Competitive Exam Focus</span></div>
+                <div class="stream-grid">
+                    <div class="stream-card">
+                        <div class="stream-icon">🧪</div>
+                        <div class="stream-name">PCM Stream</div>
+                        <div class="stream-subjects">Physics, Chemistry, Mathematics + English</div>
+                        <p>Advanced problem solving, 200+ mock tests, JEE Advanced orientation, 5 classes/week.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">🧬</div>
+                        <div class="stream-name">PCB Stream</div>
+                        <div class="stream-subjects">Physics, Chemistry, Biology + English</div>
+                        <p>NEET‑centric, rapid revision modules, 95+ mock tests, daily quizzes, 5 classes/week.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">💼</div>
+                        <div class="stream-name">Commerce Stream</div>
+                        <div class="stream-subjects">Accountancy, Business Studies, Economics, English</div>
+                        <p>Board exam target with case studies, project work, revision marathons.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">📜</div>
+                        <div class="stream-name">Humanities Stream</div>
+                        <div class="stream-subjects">History, Political Science, Geography, Economics, English</div>
+                        <p>Answer writing workshops, map and data interpretation, intensive board prep.</p>
+                        <a href="/enroll" class="btn-primary btn-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMPETITIVE EXAM COACHING ========== -->
+    <section class="section-padding bg-white" id="competitive">
+        <div class="container">
+            <h2 class="section-header text-center"><span class="text-primary">🏆 Competitive Exam Coaching</span> (JEE / NEET)</h2>
+            <p class="text-center mb-4">Rigorous preparation with a proven track record. Integrated with our classroom programs or as standalone crash courses, these batches are led by IITians and medical experts.</p>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-content">
+                        <span class="course-tag">JEE</span>
+                        <h3>JEE Main + Advanced</h3>
+                        <p>Complete PCM coverage with 200+ mock tests, previous year papers, AI predictor, and one‑on‑one mentorship.</p>
+                        <ul class="course-features"><li>Duration: 2 years</li><li>Level: Advanced</li><li>Personal mentor assigned</li></ul>
+                        <a href="/enroll" class="btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-content">
+                        <span class="course-tag">NEET</span>
+                        <h3>NEET Biology Focus</h3>
+                        <p>Master PCB with special emphasis on NCERT, diagram practice, and AI‑based revision. 95+ full mocks.</p>
+                        <ul class="course-features"><li>Duration: 1.5 years</li><li>Level: Advanced</li><li>Daily quiz & analysis</li></ul>
+                        <a href="/enroll" class="btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-content">
+                        <span class="course-tag">Crash Course</span>
+                        <h3>45‑Day JEE/NEET Crash</h3>
+                        <p>Quick revision of entire syllabus with high‑yield problems and exam strategy sessions – intensive classroom program, 6 days a week.</p>
+                        <ul class="course-features"><li>Duration: 45 days</li><li>Level: Advanced</li><li>6 days/week intensive</li></ul>
+                        <a href="/enroll" class="btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FUTURE SKILLS ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-header text-center"><span class="text-primary">🚀 Future Skills</span></h2>
+            <p class="text-center mb-4">Hands‑on programs in emerging technologies conducted in our innovation lab. Open to students of all ages.</p>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-content">
+                        <span class="course-tag">Trending</span>
+                        <h3>AI & Machine Learning for Kids</h3>
+                        <p>Introduction to AI concepts through games and visual programming. Build your first AI model!</p>
+                        <ul class="course-features"><li>Duration: 3 months</li><li>Age: 10+</li><li>Project certificate</li></ul>
+                        <a href="/enroll" class="btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-content">
+                        <span class="course-tag">Popular</span>
+                        <h3>Robotics & IoT</h3>
+                        <p>Build robots, sensors, and smart devices. Real‑world applications and competition prep.</p>
+                        <ul class="course-features"><li>Duration: 4 months</li><li>Level: Beginner‑Intermediate</li><li>Kit included</li></ul>
+                        <a href="/enroll" class="btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-content">
+                        <span class="course-tag">New</span>
+                        <h3>Coding & App Development</h3>
+                        <p>Learn Python, JavaScript, and build real apps. Perfect for beginners to coders.</p>
+                        <ul class="course-features"><li>Duration: 5 months</li><li>Level: All levels</li><li>Portfolio projects</li></ul>
+                        <a href="/enroll" class="btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY OUR CLASSROOM PROGRAMS ARE DIFFERENT ========== -->
+    <section class="bg-white section-padding">
+        <div class="container text-center">
+            <h2>What Makes Our <span class="text-primary">Classroom Programs Unique</span></h2>
+            <div class="feature-grid mt-3">
+                <div class="feature-card">
+                    <div class="card-icon">🤖</div>
+                    <h3>AI Personalisation</h3>
+                    <p>Every student gets a unique learning plan that adapts in real time – complementing classroom teaching.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Small Batches</h3>
+                    <p>Maximum 25 students for individual attention from expert faculty.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Progress Analytics</h3>
+                    <p>Parents receive AI‑generated performance reports every week, tracking every milestone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Exam Simulation</h3>
+                    <p>AI replicates real exam pressure through our test series, building confidence for the final day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="section-padding text-center">
+        <h2>Not Sure Which Batch to Join?</h2>
+        <p>Our academic counsellors will help you find the perfect classroom program – free of charge.</p>
+        <a href="/contact" class="btn-primary btn-lg">Talk to a Counsellor</a>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s" alt="Logo" width="48" height="48">
+                    <h4>Sankalp Digital Pathshala</h4>
+                    <p>Premium offline coaching, empowered by AI. Since 2020.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/courses">Classroom Programs</a></li>
+                        <li><a href="/test-series">Test Series</a></li>
+                        <li><a href="/study-material">Study Material</a></li>
+                        <li><a href="/results">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating widgets -->
+    <div class="ai-floating-widget" onclick="location.href='/ai-assistant'">🤖</div>
+    <a href="https://wa.me/919453961105" target="_blank" class="whatsapp-floating">💬</a>
+    <script src="/assets/app.js?v=3"></script>
+    <script src="/assets/site-upgrade.js?v=1"></script>
+</body>
+</html>

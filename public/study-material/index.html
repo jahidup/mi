@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Study Material – Sankalp Digital Pathshala | Comprehensive Premium Resources">
+    <meta name="description" content="Access an exhaustive library of premium study materials for Classes 6‑12, JEE, NEET. Handwritten notes, chapter‑wise PDFs, practice sets, previous year papers, assignments, and quick revision tools – all curated by expert faculty and seamlessly integrated with our offline classroom programs. AI‑powered recommendations and 24/7 doubt solver included.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Study Material – Sankalp Digital Pathshala">
+    <meta property="og:description" content="The most comprehensive collection of classroom‑aligned study resources. Printed notes, digital PDFs, AI‑graded practice sets, and revision tools for every student.">
+    <meta property="og:image" content="https://www.sankalpdigitalpathshala.online/assets/og-study-material.jpg">
+    <meta property="og:url" content="https://www.sankalpdigitalpathshala.online/study-material">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sankalpdigitalpathshala.online/study-material">
+    <title>Study Material – Sankalp Digital Pathshala</title>
+    <link rel="stylesheet" href="/assets/style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s">
+    <style>
+        /* Enhanced study material page styles */
+        .resource-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 1rem;
+        }
+        .resource-tab {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            background: var(--off-white);
+            border: 1px solid transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        .resource-tab.active, .resource-tab:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .resource-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .resource-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .resource-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .resource-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .resource-desc {
+            font-size: 0.9rem;
+            color: var(--slate);
+            margin: 0.5rem 0;
+        }
+        .resource-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--slate);
+        }
+        .download-btn {
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+        }
+        .printed-badge {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 600;
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            display: inline-block;
+        }
+        .request-box {
+            background: linear-gradient(135deg, var(--primary-light), white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/site-upgrade.css?v=1">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Sankalp Digital Pathshala Home">
+                <img src="https://sankalpshiksha.com/wp-content/uploads/2025/07/SANKALP-SHIKSHA-N-LOGO-2048x415.png" alt="Sankalp Digital Pathshala Logo" width="160" height="48">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/study-material" class="active">Study Material</a></li>
+                <li><a href="/test-series">Test Series</a></li>
+                <li><a href="/results">Results</a></li>
+                <li><a href="/faculty">Faculty</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/ai-assistant" class="btn-primary btn-nav">AI Assistant</a>
+                <a href="https://wa.me/919453961105" target="_blank" rel="noopener" class="btn-whatsapp btn-nav">💬 WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" style="background: linear-gradient(to bottom, var(--off-white), white);">
+        <div class="container text-center">
+            <h1 class="hero-heading">Your Ultimate <span class="text-primary">Study Material Hub</span></h1>
+            <p class="hero-subtitle" style="max-width:800px; margin:0 auto;">
+                Every resource you need, perfectly aligned with our classroom teaching. Printed copies distributed in class, plus 24/7 digital access with AI‑powered search and recommendations. From handwritten notes to previous year papers, everything is crafted by our expert faculty.
+            </p>
+            <div class="trust-badges mt-3" style="justify-content:center;">
+                <span class="badge">📚 500+ Resources</span>
+                <span class="badge">🖨️ Printed &amp; Digital</span>
+                <span class="badge">🤖 AI‑Enhanced</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESOURCE TABS ========== -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="resource-tabs" id="resourceTabs">
+                <button class="resource-tab active" data-tab="foundation">Foundation (6‑8)</button>
+                <button class="resource-tab" data-tab="secondary">Secondary (9‑10)</button>
+                <button class="resource-tab" data-tab="senior">Senior Secondary (11‑12)</button>
+                <button class="resource-tab" data-tab="competitive">JEE / NEET</button>
+                <button class="resource-tab" data-tab="futureskills">Future Skills</button>
+                <button class="resource-tab" data-tab="general">General Resources</button>
+            </div>
+
+            <!-- FOUNDATION 6-8 -->
+            <div class="tab-content active" id="tab-foundation">
+                <h2 class="mb-3">📝 Foundation Level (Class 6‑8)</h2>
+                <p class="mb-4">Build strong fundamentals with our printed notes, engaging practice sets, and interactive digital resources. Every subject is covered with age‑appropriate material.</p>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📐</div>
+                        <div class="resource-title">Mathematics Notes (Class 6‑8)</div>
+                        <div class="resource-desc">Handwritten topic‑wise notes with solved examples for all three grades. <span class="printed-badge">Printed in class</span></div>
+                        <div class="resource-meta"><span>PDF | 120 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🔬</div>
+                        <div class="resource-title">Science Explorer Notes</div>
+                        <div class="resource-desc">Colour‑coded handwritten notes with diagrams and quick facts. Physics, Chemistry, Biology.</div>
+                        <div class="resource-meta"><span>PDF | 95 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <div class="resource-title">English Grammar & Composition</div>
+                        <div class="resource-desc">Worksheets, grammar rules, and writing practice sets. Includes speaking exercises.</div>
+                        <div class="resource-meta"><span>PDF + Audio</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🌍</div>
+                        <div class="resource-title">Social Science Mind Maps</div>
+                        <div class="resource-desc">Visual summaries of History, Geography, Civics. Perfect for quick revision.</div>
+                        <div class="resource-meta"><span>PDF | 45 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">💻</div>
+                        <div class="resource-title">Computer & AI Basics Workbook</div>
+                        <div class="resource-desc">Coding exercises, AI concept sheets, and lab assignments.</div>
+                        <div class="resource-meta"><span>PDF + Lab Manual</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">✅</div>
+                        <div class="resource-title">Chapter‑wise Practice Sets (All Subjects)</div>
+                        <div class="resource-desc">Hundreds of questions with solutions, graded from easy to challenging.</div>
+                        <div class="resource-meta"><span>PDF | 200+ sets</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECONDARY 9-10 -->
+            <div class="tab-content" id="tab-secondary">
+                <h2 class="mb-3">📘 Secondary Level (Class 9‑10)</h2>
+                <p class="mb-4">Board‑focused resources with comprehensive theory, solved examples, and extensive practice. All materials follow the latest CBSE/ICSE syllabus.</p>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📐</div>
+                        <div class="resource-title">Mathematics (Class 9 & 10)</div>
+                        <div class="resource-desc">Full syllabus handwritten notes + formula sheets. Includes RD Sharma & NCERT solutions. <span class="printed-badge">Printed copy provided</span></div>
+                        <div class="resource-meta"><span>PDF | 210 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🔬</div>
+                        <div class="resource-title">Science (Physics, Chemistry, Biology)</div>
+                        <div class="resource-desc">Topic‑wise PDFs with in‑text questions, numericals, and practical file notes.</div>
+                        <div class="resource-meta"><span>3 PDFs | 350 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <div class="resource-title">English Literature & Language</div>
+                        <div class="resource-desc">Chapter summaries, character sketches, grammar practice, and sample papers.</div>
+                        <div class="resource-meta"><span>PDF | 130 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🌍</div>
+                        <div class="resource-title">Social Science (Hist, Geo, Pol Sci, Eco)</div>
+                        <div class="resource-desc">Map work, important dates, one‑page revision notes, and previous year questions.</div>
+                        <div class="resource-meta"><span>PDF | 180 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">💻</div>
+                        <div class="resource-title">Computer Applications / IT</div>
+                        <div class="resource-desc">HTML, Python, cyber safety notes, and practical file assignments.</div>
+                        <div class="resource-meta"><span>PDF | 75 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📑</div>
+                        <div class="resource-title">Previous Year Board Papers (2015‑2025)</div>
+                        <div class="resource-desc">Solved papers for all subjects with marking scheme highlights.</div>
+                        <div class="resource-meta"><span>PDF | 60+ papers</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SENIOR SECONDARY 11-12 -->
+            <div class="tab-content" id="tab-senior">
+                <h2 class="mb-3">🎓 Senior Secondary (Class 11‑12)</h2>
+                <p class="mb-4">Stream‑wise exhaustive material aligned with board exams and competitive exam foundation. Notes, practice books, and revision kits delivered at the start of each term.</p>
+                <div class="stream-grid">
+                    <div class="stream-card">
+                        <div class="stream-icon">🧪</div>
+                        <div class="stream-name">PCM Stream</div>
+                        <div class="stream-subjects">Physics, Chemistry, Mathematics + English</div>
+                        <ul style="text-align:left; margin:1rem 0; color:var(--slate);">
+                            <li>Handwritten notes (600+ pages)</li>
+                            <li>JEE Main & Advanced problem sets</li>
+                            <li>Practical file guides</li>
+                            <li>Formula compendium</li>
+                        </ul>
+                        <a href="#" class="btn-secondary btn-sm">Access PCM Resources</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">🧬</div>
+                        <div class="stream-name">PCB Stream</div>
+                        <div class="stream-subjects">Physics, Chemistry, Biology + English</div>
+                        <ul style="text-align:left; margin:1rem 0; color:var(--slate);">
+                            <li>NCERT‑focused biology notes</li>
+                            <li>NEET practice modules</li>
+                            <li>Diagram bank</li>
+                            <li>Quick revision charts</li>
+                        </ul>
+                        <a href="#" class="btn-secondary btn-sm">Access PCB Resources</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">💼</div>
+                        <div class="stream-name">Commerce Stream</div>
+                        <div class="stream-subjects">Accountancy, Business Studies, Economics, English</div>
+                        <ul style="text-align:left; margin:1rem 0; color:var(--slate);">
+                            <li>Case study compilations</li>
+                            <li>Formula sheets & formats</li>
+                            <li>Project guidelines</li>
+                        </ul>
+                        <a href="#" class="btn-secondary btn-sm">Access Commerce Resources</a>
+                    </div>
+                    <div class="stream-card">
+                        <div class="stream-icon">📜</div>
+                        <div class="stream-name">Humanities Stream</div>
+                        <div class="stream-subjects">History, Political Science, Geography, Economics, English</div>
+                        <ul style="text-align:left; margin:1rem 0; color:var(--slate);">
+                            <li>Map & data interpretation</li>
+                            <li>Answer writing templates</li>
+                            <li>Important timelines & charts</li>
+                        </ul>
+                        <a href="#" class="btn-secondary btn-sm">Access Humanities Resources</a>
+                    </div>
+                </div>
+                <div class="mt-4"><p>All streams include <strong>previous year board papers (solved)</strong> and <strong>weekly assignments with AI grading</strong>. Printed booklets are handed out on campus; digital copies are always accessible.</p></div>
+            </div>
+
+            <!-- COMPETITIVE JEE / NEET -->
+            <div class="tab-content" id="tab-competitive">
+                <h2 class="mb-3">🏆 JEE & NEET Preparation</h2>
+                <p class="mb-4">Exclusive material created by IITians and medical experts. Deep theory, advanced problems, and strategy guides.</p>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">🎯</div>
+                        <div class="resource-title">JEE Main + Advanced Study Pack</div>
+                        <div class="resource-desc">Complete PCM theory notes, 200+ mock tests, previous year papers (2019‑2025).</div>
+                        <div class="resource-meta"><span>PDFs & Tests</span><a href="#" class="btn-secondary download-btn">📥 Access</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🏥</div>
+                        <div class="resource-title">NEET Biology & Full Syllabus Pack</div>
+                        <div class="resource-desc">NCERT‑based notes, diagram collection, chapter‑wise MCQs, and revision cards.</div>
+                        <div class="resource-meta"><span>PDFs & Tests</span><a href="#" class="btn-secondary download-btn">📥 Access</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📊</div>
+                        <div class="resource-title">All India Test Series Papers</div>
+                        <div class="resource-desc">Solved papers with detailed solutions, AI rank prediction, and topic‑wise analytics.</div>
+                        <div class="resource-meta"><span>Online + PDF</span><a href="#" class="btn-secondary download-btn">📥 View</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🧠</div>
+                        <div class="resource-title">Formula & Strategy Guide</div>
+                        <div class="resource-desc">Quick revision booklets covering all important formulas and exam strategies.</div>
+                        <div class="resource-meta"><span>PDF</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FUTURE SKILLS -->
+            <div class="tab-content" id="tab-futureskills">
+                <h2 class="mb-3">🚀 Future Skills Resources</h2>
+                <p class="mb-4">Hands‑on project guides, coding exercises, and AI/ML workbooks. Used in our innovation lab sessions, also available for self‑study.</p>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">🤖</div>
+                        <div class="resource-title">AI & Machine Learning Workbook</div>
+                        <div class="resource-desc">Step‑by‑step projects, visual programming tasks, and AI model building guides.</div>
+                        <div class="resource-meta"><span>PDF + Code</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🔧</div>
+                        <div class="resource-title">Robotics & IoT Projects</div>
+                        <div class="resource-desc">Circuit diagrams, sensor datasheets, and assembly instructions for 10+ robots.</div>
+                        <div class="resource-meta"><span>PDF | 85 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">💻</div>
+                        <div class="resource-title">Coding & App Development Guide</div>
+                        <div class="resource-desc">Python & JavaScript exercises, mini projects, and portfolio ideas.</div>
+                        <div class="resource-meta"><span>PDF | 110 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GENERAL RESOURCES -->
+            <div class="tab-content" id="tab-general">
+                <h2 class="mb-3">🔄 General & Revision Resources</h2>
+                <p class="mb-4">One‑stop quick revision tools, formula compilations, and subject‑wise summaries.</p>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📏</div>
+                        <div class="resource-title">Maths Formula Book (All Classes)</div>
+                        <div class="resource-desc">From basic arithmetic to advanced calculus – all formulas in one PDF.</div>
+                        <div class="resource-meta"><span>PDF | 45 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🧠</div>
+                        <div class="resource-title">Science Mind Maps</div>
+                        <div class="resource-desc">Visual summaries for Physics, Chemistry, Biology – perfect for last‑minute revision.</div>
+                        <div class="resource-meta"><span>PDF | 60 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📝</div>
+                        <div class="resource-title">One‑Page Chapter Summaries</div>
+                        <div class="resource-desc">Key points of every chapter in Social Science, Science, and English.</div>
+                        <div class="resource-meta"><span>PDF | 100 pages</span><a href="#" class="btn-secondary download-btn">📥 Download</a></div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📅</div>
+                        <div class="resource-title">Weekly Assignment Sheets</div>
+                        <div class="resource-desc">Graded assignments with AI feedback. New set every week for enrolled students.</div>
+                        <div class="resource-meta"><span>Online + Print</span><a href="#" class="btn-secondary download-btn">📥 View</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REQUEST A RESOURCE ========== -->
+    <section class="section-padding" style="background: var(--off-white);">
+        <div class="container">
+            <div class="request-box">
+                <h2>Can't find what you're looking for?</h2>
+                <p>Our faculty is constantly creating new resources. Request a specific topic or subject, and we'll add it to the library.</p>
+                <a href="/contact?subject=Study Material Request" class="btn-primary">Request a Resource</a>
+                <p class="mt-3" style="font-size:0.9rem;">Or WhatsApp us directly: <a href="https://wa.me/919453961105" class="text-primary">+91 9453961105</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AI STUDY PLANNER CTA ========== -->
+    <section class="bg-primary-light section-padding text-center" style="background: var(--primary-light);">
+        <div class="container">
+            <h2>Get a Personalised Study Plan</h2>
+            <p>Our AI will create a daily schedule using exactly these resources, customised to your class and goals. Maximise the output of your study material.</p>
+            <a href="/ai-assistant" class="btn-primary">Create My Plan</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s" alt="Logo" width="48" height="48">
+                    <h4>Sankalp Digital Pathshala</h4>
+                    <p>Premium offline coaching, powered by AI. Since 2020.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="/test-series">Test Series</a></li>
+                        <li><a href="/study-material">Study Material</a></li>
+                        <li><a href="/results">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating widgets -->
+    <div class="ai-floating-widget" onclick="location.href='/ai-assistant'">🤖</div>
+    <a href="https://wa.me/919453961105" target="_blank" class="whatsapp-floating">💬</a>
+
+    <script src="/assets/app.js?v=3"></script>
+    <script>
+        // Tab switching for resource categories
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.resource-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = btn.dataset.tab;
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    document.getElementById('tab-' + target).classList.add('active');
+                });
+            });
+        });
+    </script>
+    <script src="/assets/site-upgrade.js?v=1"></script>
+</body>
+</html>

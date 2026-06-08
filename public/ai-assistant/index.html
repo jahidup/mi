@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="AI Assistant – Sankalp Digital Pathshala | 24/7 Smart Mentor">
+    <meta name="description" content="Access your personal AI academic assistant. Chat with Sankalp Sathi for guidance, solve questions instantly, and get a personalised study plan – a powerful companion to your premium offline coaching.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI Assistant – Sankalp Digital Pathshala">
+    <meta property="og:description" content="Chat with our AI mentor, solve questions, and accelerate your learning – anytime, anywhere.">
+    <meta property="og:image" content="https://www.sankalpdigitalpathshala.online/assets/og-ai-assistant.jpg">
+    <meta property="og:url" content="https://www.sankalpdigitalpathshala.online/ai-assistant">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sankalpdigitalpathshala.online/ai-assistant">
+    <title>AI Assistant – Sankalp Digital Pathshala</title>
+    <link rel="stylesheet" href="/assets/style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s">
+    <link rel="stylesheet" href="/assets/site-upgrade.css?v=1">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Sankalp Digital Pathshala Home">
+                <img src="https://sankalpshiksha.com/wp-content/uploads/2025/07/SANKALP-SHIKSHA-N-LOGO-2048x415.png" alt="Sankalp Digital Pathshala Logo" width="160" height="48">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/study-material">Study Material</a></li>
+                <li><a href="/test-series">Test Series</a></li>
+                <li><a href="/results">Results</a></li>
+                <li><a href="/faculty">Faculty</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/ai-assistant" class="btn-primary btn-nav active">AI Assistant</a>
+                <a href="https://wa.me/919453961105" target="_blank" rel="noopener" class="btn-whatsapp btn-nav">💬 WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" style="background: linear-gradient(to bottom, var(--off-white), white);">
+        <div class="container text-center">
+            <h1 class="hero-heading">Your Personal <span class="text-primary">AI Academic Assistant</span></h1>
+            <p class="hero-subtitle" style="max-width:800px; margin:0 auto;">Designed to support your offline classroom journey. Chat with Sankalp Sathi, solve any academic question, and generate a personalised study plan – available 24/7, even after class.</p>
+        </div>
+    </section>
+
+    <!-- ========== ASSISTANT TABS ========== -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="assistant-tabs" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+                <button class="tab-btn active" data-tab="chat">💬 AI Mentor Chat</button>
+                <button class="tab-btn" data-tab="solver">📝 AI Question Solver</button>
+                <button class="tab-btn" data-tab="planner">📅 Study Plan Generator</button>
+            </div>
+
+            <!-- TAB 1: AI Mentor Chat -->
+            <div class="assistant-tab-content active" id="tab-chat">
+                <div class="chat-interface" style="max-width: 800px; margin: 0 auto;">
+                    <div class="chat-window glass-light" id="chatWindow">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message bot">
+                                <div class="bubble">
+                                    <p>👋 Hi! I'm <strong>Sankalp Sathi</strong>, your AI mentor. How can I help you today? Ask me about admissions, courses, study tips, or anything academic!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="typing-indicator hidden" id="typingIndicator">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="chat-input-bar glass-light" id="chatInputBar">
+                        <input type="text" id="chatInput" placeholder="Type your message...">
+                        <button id="sendMessageBtn" aria-label="Send message">➤</button>
+                    </div>
+
+                    <!-- Quick Prompts -->
+                    <div class="quick-prompts glass-light mt-3" id="quickPrompts" style="padding:1.5rem;">
+                        <h4>Quick Prompts</h4>
+                        <div class="prompt-chips" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <button class="prompt-chip">How to enroll in JEE coaching?</button>
+                            <button class="prompt-chip">Which program is best for class 9?</button>
+                            <button class="prompt-chip">Tell me about the AI Learning feature</button>
+                            <button class="prompt-chip">I need study motivation</button>
+                        </div>
+                    </div>
+
+                    <!-- Lead Capture Card (hidden initially) -->
+                    <div class="lead-capture-card glass-light mt-3 hidden" id="leadCaptureCard" style="padding:1.5rem;">
+                        <h3>Get Personalised Guidance</h3>
+                        <p>Share a few details and our team will help you choose the perfect classroom program.</p>
+                        <form id="leadCaptureForm">
+                            <div class="form-group" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <input type="text" id="leadFirstName" placeholder="First Name *" required style="flex:1;">
+                                <input type="text" id="leadClass" placeholder="Class *" required style="flex:1;">
+                            </div>
+                            <div class="form-group" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <input type="text" id="leadInterest" placeholder="Interest (JEE/NEET/etc) *" required style="flex:1;">
+                                <input type="tel" id="leadPhone" placeholder="Phone *" required style="flex:1;">
+                            </div>
+                            <div class="form-group" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <input type="text" id="leadCity" placeholder="City" style="flex:1;">
+                                <input type="text" id="leadParentName" placeholder="Parent Name" style="flex:1;">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="leadEmail" placeholder="Email (optional)" style="width:100%;">
+                            </div>
+                            <button type="submit" class="btn-primary">Submit &amp; Get Help</button>
+                        </form>
+                        <div class="lead-feedback hidden mt-2" id="leadFeedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: AI Question Solver -->
+            <div class="assistant-tab-content hidden" id="tab-solver">
+                <div class="solver-card glass-light" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+                    <div class="input-tabs" style="margin-bottom: 1.5rem;">
+                        <button class="solver-tab-btn active" data-type="text">📝 Text</button>
+                        <button class="solver-tab-btn" data-type="image">📷 Image</button>
+                        <button class="solver-tab-btn" data-type="pdf">📄 PDF</button>
+                    </div>
+
+                    <!-- Text Input -->
+                    <div class="solver-input-area" id="input-text">
+                        <textarea id="questionText" placeholder="Type your question here... (e.g., 'Solve the quadratic equation 2x² - 4x - 6 = 0')" rows="4" style="width:100%; padding:1rem; border-radius: var(--radius-sm); border:1px solid var(--border-light);"></textarea>
+                        <div class="action-row mt-2">
+                            <button id="submitText" class="btn-primary">Get Solution</button>
+                        </div>
+                    </div>
+
+                    <!-- Image Input -->
+                    <div class="solver-input-area hidden" id="input-image">
+                        <div class="file-upload-zone" id="imageDropZone" style="border:2px dashed var(--border-light); border-radius: var(--radius-md); padding:2rem; text-align:center;">
+                            <span style="font-size:2rem;">🖼️</span>
+                            <p>Drag &amp; drop an image here, or click to browse</p>
+                            <input type="file" id="imageFileInput" accept="image/*" hidden>
+                            <button id="pickImageBtn" class="btn-secondary">Choose Image</button>
+                        </div>
+                        <div class="preview-area" id="imagePreview" style="display:none;">
+                            <img id="imagePreviewImg" src="" alt="Preview" style="max-height:200px; border-radius:12px;">
+                            <button id="removeImageBtn" class="btn-small">✕</button>
+                        </div>
+                        <textarea id="imageQuestion" placeholder="Ask anything about this image..." rows="3" style="width:100%; margin-top:1rem; padding:1rem; border-radius: var(--radius-sm); border:1px solid var(--border-light);"></textarea>
+                        <button id="submitImage" class="btn-primary mt-2" style="margin-top:1rem;">Solve from Image</button>
+                    </div>
+
+                    <!-- PDF Input -->
+                    <div class="solver-input-area hidden" id="input-pdf">
+                        <div class="file-upload-zone" id="pdfDropZone" style="border:2px dashed var(--border-light); border-radius: var(--radius-md); padding:2rem; text-align:center;">
+                            <span style="font-size:2rem;">📑</span>
+                            <p>Drop a PDF here or click to select (scanned PDFs supported)</p>
+                            <input type="file" id="pdfFileInput" accept=".pdf,application/pdf" hidden>
+                            <button id="pickPdfBtn" class="btn-secondary">Choose PDF</button>
+                        </div>
+                        <div class="preview-area" id="pdfPreview" style="display:none;">
+                            <span id="pdfFileName" class="file-name-display"></span>
+                            <button id="removePdfBtn" class="btn-small">✕</button>
+                        </div>
+                        <textarea id="pdfQuestion" placeholder="Ask anything about this PDF..." rows="3" style="width:100%; margin-top:1rem; padding:1rem; border-radius: var(--radius-sm); border:1px solid var(--border-light);"></textarea>
+                        <button id="submitPdf" class="btn-primary mt-2" style="margin-top:1rem;">Solve from PDF</button>
+                    </div>
+
+                    <!-- Response -->
+                    <div class="response-area mt-4" id="responseArea">
+                        <div class="loading-indicator hidden" id="loadingIndicator">
+                            <span class="typing-dots">AI is thinking<span>.</span><span>.</span><span>.</span></span>
+                        </div>
+                        <div class="answer-box glass-light" id="answerBox" style="display:none; padding:1.5rem;">
+                            <h3>Solution</h3>
+                            <div class="answer-content" id="answerContent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: Study Plan Generator -->
+            <div class="assistant-tab-content hidden" id="tab-planner">
+                <div class="glass-light" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+                    <h2>Generate Your Personalised Study Plan</h2>
+                    <p>Tell us your goals, and our AI will create a daily schedule using our resources – perfectly synced with your classroom timetable.</p>
+                    <form id="studyPlanForm">
+                        <div class="form-group">
+                            <label for="spClass">Class / Exam</label>
+                            <select id="spClass" required>
+                                <option value="">Select...</option>
+                                <option>Class 6-8 Foundation</option>
+                                <option>Class 9-10 Board Prep</option>
+                                <option>Class 11-12 PCM</option>
+                                <option>Class 11-12 PCB</option>
+                                <option>JEE Main</option>
+                                <option>JEE Advanced</option>
+                                <option>NEET</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="spHours">Available Study Hours per Day</label>
+                            <input type="number" id="spHours" min="1" max="10" value="4">
+                        </div>
+                        <div class="form-group">
+                            <label for="spWeaknesses">Weak Areas (optional)</label>
+                            <input type="text" id="spWeaknesses" placeholder="e.g., Organic Chemistry, Calculus">
+                        </div>
+                        <button type="submit" class="btn-primary">Generate Plan</button>
+                    </form>
+                    <div class="plan-output mt-4" id="planOutput" style="display:none;">
+                        <h3>Your AI‑Generated Study Plan</h3>
+                        <div style="background: var(--off-white); padding: 1.5rem; border-radius: var(--radius-md); margin-top:1rem;">
+                            <p><strong>Daily Schedule:</strong></p>
+                            <ul>
+                                <li>6:00 AM – 7:30 AM: Core Subject 1 (Theory & Concepts)</li>
+                                <li>4:00 PM – 5:30 PM: Core Subject 2 (Problem Solving)</li>
+                                <li>8:00 PM – 9:30 PM: Revision & AI Practice Tests</li>
+                            </ul>
+                            <p class="mt-2">Based on your goals, we've allocated 30% time to weak areas. Use the AI Solver tab for instant doubt resolution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s" alt="Logo" width="48" height="48">
+                    <h4>Sankalp Digital Pathshala</h4>
+                    <p>Premium offline coaching, powered by AI. Since 2020.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/courses">Courses</a></li>
+                        <li><a href="/test-series">Test Series</a></li>
+                        <li><a href="/study-material">Study Material</a></li>
+                        <li><a href="/results">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating widgets -->
+    <div class="ai-floating-widget" onclick="location.href='/ai-assistant'">🤖</div>
+    <a href="https://wa.me/919453961105" target="_blank" class="whatsapp-floating">💬</a>
+
+    <script src="/assets/app.js?v=3"></script>
+    <script>
+        // Additional in‑page logic for the unified AI assistant page.
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching for assistant sections
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.assistant-tab-content');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tab = btn.dataset.tab;
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    tabContents.forEach(content => content.classList.add('hidden'));
+                    document.getElementById('tab-' + tab).classList.remove('hidden');
+                });
+            });
+
+            // Sub‑tabs for the solver (text/image/pdf)
+            const solverTabBtns = document.querySelectorAll('.solver-tab-btn');
+            const solverAreas = {
+                text: document.getElementById('input-text'),
+                image: document.getElementById('input-image'),
+                pdf: document.getElementById('input-pdf')
+            };
+            solverTabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const type = btn.dataset.type;
+                    solverTabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    Object.values(solverAreas).forEach(area => area.classList.add('hidden'));
+                    solverAreas[type].classList.remove('hidden');
+                });
+            });
+
+            // Study Plan Generator (mock)
+            const studyPlanForm = document.getElementById('studyPlanForm');
+            if (studyPlanForm) {
+                studyPlanForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    document.getElementById('planOutput').style.display = 'block';
+                });
+            }
+        });
+    </script>
+    <script src="/assets/site-upgrade.js?v=1"></script>
+</body>
+</html>

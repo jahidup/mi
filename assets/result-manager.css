@@ -1,0 +1,255 @@
+/* Result manager pages: compact admin tooling, no modal flow. */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .7rem 1.5rem;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--navy);
+  border: 1px solid var(--border-light);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(0, 172, 238, .06);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-danger,
+.form-error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.result-page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-inline-message {
+  min-height: 0;
+  margin-bottom: .75rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.result-inline-message.success,
+.result-inline-message.error {
+  padding: .7rem .9rem;
+  border: 1px solid transparent;
+}
+
+.result-inline-message.success {
+  background: rgba(16, 185, 129, .1);
+  color: #047857;
+  border-color: rgba(16, 185, 129, .22);
+}
+
+.result-inline-message.error {
+  background: rgba(239, 68, 68, .1);
+  color: #b91c1c;
+  border-color: rgba(239, 68, 68, .22);
+}
+
+.result-muted {
+  color: var(--slate);
+  margin: 0;
+}
+
+.result-actions,
+.result-toolbar,
+.result-form-actions {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.result-toolbar {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.result-toolbar select,
+.compact-field select {
+  min-height: 42px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: #fff;
+  padding: .65rem .8rem;
+}
+
+.result-page {
+  display: none;
+}
+
+.result-page.active {
+  display: block;
+}
+
+.result-split {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(280px, .9fr);
+  gap: 1.25rem;
+}
+
+.result-panel {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.result-panel h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.result-back-btn {
+  margin-bottom: 1rem;
+}
+
+.segmented-control {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  width: min(100%, 420px);
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--off-white);
+  border: 1px solid var(--border-light);
+}
+
+.segmented-control button {
+  min-height: 40px;
+  border-radius: 6px;
+  color: var(--slate);
+  font-weight: 600;
+  background: transparent;
+}
+
+.segmented-control button.active {
+  color: #fff;
+  background: var(--primary);
+}
+
+.builder-field-setup {
+  border-top: 1px solid var(--border-light);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.result-chip-list,
+.result-category-list {
+  display: grid;
+  gap: .65rem;
+  margin-top: 1rem;
+}
+
+.result-chip,
+.result-category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .75rem;
+  border-radius: 8px;
+  background: var(--off-white);
+  border: 1px solid var(--border-light);
+}
+
+.result-chip small,
+.result-category-item small {
+  display: block;
+  color: var(--slate);
+}
+
+.result-chip-actions,
+.result-row-actions {
+  display: flex;
+  gap: .45rem;
+  flex-wrap: wrap;
+}
+
+.result-dynamic-section {
+  margin-top: .5rem;
+}
+
+.publish-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .35rem 0 1rem;
+  font-weight: 600;
+}
+
+.result-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.result-status.published {
+  background: rgba(16, 185, 129, .12);
+  color: #047857;
+}
+
+.result-status.draft {
+  background: rgba(100, 116, 139, .12);
+  color: #475569;
+}
+
+.result-table td {
+  vertical-align: middle;
+}
+
+.result-portal-search {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.result-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .result-page-head,
+  .result-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .result-actions {
+    width: 100%;
+  }
+
+  .result-actions > *,
+  .result-form-actions > * {
+    flex: 1;
+  }
+
+  .result-split,
+  .result-portal-grid {
+    grid-template-columns: 1fr;
+  }
+}

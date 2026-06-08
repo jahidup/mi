@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Dashboard – Sankalp Digital Pathshala</title>
+    <link rel="stylesheet" href="/assets/style.css?v=10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjBJILA9Yd-tJq3EUb-Ju1u61mkFh6_89XA&s">
+    <style>
+        .dashboard-layout { display: flex; min-height: 100vh; background: var(--off-white); }
+        .sidebar {
+            width: 240px; background: var(--navy); color: white;
+            display: flex; flex-direction: column; padding: 1.5rem 0;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        .sidebar-logo { text-align: center; padding: 0 1rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .sidebar-menu { flex: 1; padding: 1rem 0; list-style: none; margin: 0; }
+        .sidebar-menu li a {
+            color: #CBD5E1; padding: 0.7rem 1.5rem; display: flex; align-items: center;
+            gap: 0.6rem; font-size: 0.9rem; transition: 0.3s; text-decoration: none;
+        }
+        .sidebar-menu li a:hover, .sidebar-menu li a.active { background: rgba(255,255,255,0.1); color: white; }
+        .sidebar-footer { padding: 1rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .main-content { flex: 1; padding: 2rem; overflow-y: auto; background: var(--off-white); }
+        .dashboard-tab { display: none; }
+        .dashboard-tab.active { display: block; }
+        .stat-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .stat-card-dash { background: var(--white); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+        .table-responsive { overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius-lg); overflow: hidden; }
+        .data-table th { background: var(--off-white); padding: 0.8rem; text-align: left; font-weight: 600; }
+        .data-table td { padding: 0.8rem; border-bottom: 1px solid var(--border-light); }
+        .filter-bar { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+        .modal-overlay {
+            display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+            align-items: center; justify-content: center; z-index: 2000;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal {
+            background: white; border-radius: var(--radius-lg); padding: 2rem;
+            width: 90%; max-width: 600px; max-height: 85vh; overflow-y: auto;
+        }
+        .modal.result-modal { max-width: 980px; }
+        .form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .form-row .form-group { flex: 1; min-width: 200px; }
+    </style>
+    <link rel="stylesheet" href="/assets/site-upgrade.css?v=1">
+    <link rel="stylesheet" href="/assets/result-manager.css?v=1">
+</head>
+<body>
+<div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="https://sankalpshiksha.com/wp-content/uploads/2025/07/SANKALP-SHIKSHA-N-LOGO-2048x415.png" alt="Logo" width="160" height="48" style="margin-bottom:0.5rem;">
+            <h4 style="color:white; margin:0;">SDP Admin</h4>
+        </div>
+        <ul class="sidebar-menu" id="sidebarMenu">
+            <li><a href="#dashboardTab" class="active" data-tab="dashboardTab">📊 Dashboard</a></li>
+            <li><a href="#leadsTab" data-tab="leadsTab">👥 Leads</a></li>
+            <li><a href="#inquiriesTab" data-tab="inquiriesTab">📬 Inquiries</a></li>
+            <li><a href="#resultsTab" data-tab="resultsTab">📋 Results</a></li>
+            <li><a href="#galleryTab" data-tab="galleryTab">🖼️ Gallery</a></li>
+            <li><a href="#eventsTab" data-tab="eventsTab">📅 Events</a></li>
+            <li><a href="#programsTab" data-tab="programsTab">🎓 Programs</a></li>
+            <li><a href="#analyticsTab" data-tab="analyticsTab">📈 Analytics</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="logoutBtn" class="btn-sm btn-danger" style="width:100%;">🔒 Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="dashboardMain">
+        <!-- Dashboard Overview Tab -->
+        <section class="dashboard-tab active" id="dashboardTab">
+            <h2 class="mb-3">Dashboard <span class="text-primary">Overview</span></h2>
+            <div class="stat-cards-grid" id="dashboardStats"></div>
+        </section>
+
+        <!-- Leads Tab -->
+        <section class="dashboard-tab" id="leadsTab">
+            <h2 class="mb-3">Lead <span class="text-primary">CRM</span></h2>
+            <div class="filter-bar">
+                <select id="leadStatusFilter">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="contacted">Contacted</option>
+                    <option value="converted">Converted</option>
+                </select>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table" id="leadsTable">
+                    <thead><tr><th>Name</th><th>Class</th><th>Interest</th><th>Phone</th><th>Score</th><th>Status</th><th>Actions</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Inquiries Tab -->
+        <section class="dashboard-tab" id="inquiriesTab">
+            <h2 class="mb-3">Contact <span class="text-primary">Inquiries</span></h2>
+            <div class="filter-bar">
+                <select id="inquiryStatusFilter">
+                    <option value="all">All</option>
+                    <option value="new">New</option>
+                    <option value="contacted">Contacted</option>
+                    <option value="closed">Closed</option>
+                </select>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table" id="inquiriesTable">
+                    <thead><tr><th>Name</th><th>Email</th><th>Subject</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Results Tab -->
+        <section class="dashboard-tab" id="resultsTab">
+            <div class="result-page-head">
+                <div>
+                    <h2 class="mb-2">Result <span class="text-primary">Manager</span></h2>
+                    <p class="result-muted">Create category folders, select PDF link or marksheet mode, and publish with DOB verification.</p>
+                </div>
+                <div class="result-actions">
+                    <button id="openResultCategoryPageBtn" class="btn-secondary" type="button">New Category</button>
+                    <button id="openResultCreatePageBtn" class="btn-primary" type="button">New Result</button>
+                </div>
+            </div>
+
+            <div class="result-page active" id="adminResultListPage">
+                <div class="result-toolbar">
+                    <select id="adminResultCategoryFilter">
+                        <option value="all">All Categories</option>
+                    </select>
+                    <button id="refreshAdminResultsBtn" class="btn-sm btn-edit" type="button">Refresh</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table result-table" id="adminResultsTable">
+                        <thead>
+                            <tr><th>Category</th><th>Student</th><th>DOB</th><th>Mode</th><th>Status</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody><tr><td colspan="6">Loading results...</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="result-page" id="adminCategoryPage">
+                <button class="btn-sm btn-edit result-back-btn" type="button" data-result-page="list">Back</button>
+                <div class="result-split">
+                    <section class="result-panel">
+                        <h3>Category Setup</h3>
+                        <form id="adminCategoryForm">
+                            <input type="hidden" id="adminCategoryId">
+                            <div class="form-group">
+                                <label for="adminCategoryTitle">Title</label>
+                                <input id="adminCategoryTitle" placeholder="Monthly Test, Board Result, Scholarship Result" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Result Type</label>
+                                <div class="segmented-control" id="adminCategoryMode">
+                                    <button type="button" class="active" data-mode="pdf">Via PDF Link</button>
+                                    <button type="button" data-mode="builder">Create Marksheet</button>
+                                </div>
+                            </div>
+                            <div id="adminBuilderFieldSetup" class="builder-field-setup" style="display:none;">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="adminCategoryFieldTitle">Student Info Title</label>
+                                        <input id="adminCategoryFieldTitle" placeholder="Name, Father Name, Class">
+                                    </div>
+                                    <div class="form-group compact-field">
+                                        <label for="adminCategoryFieldRequired">Required</label>
+                                        <select id="adminCategoryFieldRequired">
+                                            <option value="true">Yes</option>
+                                            <option value="false">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button id="addAdminCategoryFieldBtn" type="button" class="btn-secondary">Add Title</button>
+                                <div id="adminCategoryFieldList" class="result-chip-list"></div>
+                            </div>
+                            <div class="result-form-actions">
+                                <button type="submit" class="btn-primary">Save Category</button>
+                                <button id="resetAdminCategoryBtn" type="button" class="btn-sm btn-edit">Clear</button>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="result-panel">
+                        <h3>Saved Categories</h3>
+                        <div id="adminCategoryList" class="result-category-list"></div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="result-page" id="adminResultEditorPage">
+                <button class="btn-sm btn-edit result-back-btn" type="button" data-result-page="list">Back</button>
+                <section class="result-panel">
+                    <h3 id="adminResultEditorTitle">Publish Result</h3>
+                    <form id="adminResultForm">
+                        <input type="hidden" id="adminResultId">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adminResultCategorySelect">Category</label>
+                                <select id="adminResultCategorySelect" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Selected Type</label>
+                                <input id="adminResultModeDisplay" readonly>
+                            </div>
+                        </div>
+
+                        <div id="adminPdfResultFields" class="result-dynamic-section">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adminPdfStudentName">Student Name</label>
+                                    <input id="adminPdfStudentName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="adminPdfDob">DOB as Password</label>
+                                    <input type="date" id="adminPdfDob">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="adminPdfLink">Result Link</label>
+                                <input id="adminPdfLink" placeholder="https://.../result.pdf">
+                            </div>
+                        </div>
+
+                        <div id="adminBuilderResultFields" class="result-dynamic-section" style="display:none;">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adminBuilderDob">DOB as Password</label>
+                                    <input type="date" id="adminBuilderDob">
+                                </div>
+                                <div class="form-group">
+                                    <label for="adminBuilderStudentImage">Student Photo</label>
+                                    <input type="file" id="adminBuilderStudentImage" accept="image/*">
+                                </div>
+                            </div>
+                            <div id="adminBuilderInfoFields" class="custom-field-grid"></div>
+                            <div class="form-row">
+                                <div class="form-group"><label for="adminMarksObtained">Obtained Marks</label><input type="number" id="adminMarksObtained" step="any"></div>
+                                <div class="form-group"><label for="adminTotalMarks">Total Marks</label><input type="number" id="adminTotalMarks" step="any"></div>
+                                <div class="form-group"><label for="adminPercentage">Percentage</label><input type="number" id="adminPercentage" step="any"></div>
+                                <div class="form-group"><label for="adminGrade">Grade</label><input id="adminGrade"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="adminSubjects">Subjects</label>
+                                <textarea id="adminSubjects" rows="5" placeholder="Mathematics | 92 | 100 | A+"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="adminRemarks">Remarks</label>
+                                <textarea id="adminRemarks" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <label class="publish-toggle"><input type="checkbox" id="adminResultPublished"> Publish result</label>
+                        <div class="result-form-actions">
+                            <button type="submit" class="btn-primary">Save Result</button>
+                            <button id="resetAdminResultBtn" type="button" class="btn-sm btn-edit">Clear</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+
+        <!-- Gallery Tab (unchanged) -->
+        <section class="dashboard-tab" id="galleryTab">
+            <h2 class="mb-3">Gallery <span class="text-primary">Manager</span></h2>
+            <form id="galleryUploadForm" class="mb-3">
+                <div class="upload-zone" id="galleryDropZone">
+                    <p>Click or drop image here</p>
+                    <input type="file" id="galleryImageInput" accept="image/*" hidden>
+                </div>
+                <div class="form-group mt-2"><input type="text" id="galleryCaption" placeholder="Caption"></div>
+                <button type="submit" class="btn-primary">Upload</button>
+            </form>
+            <div class="gallery-admin-grid" id="adminGalleryGrid"></div>
+        </section>
+
+        <!-- Events Tab (unchanged) -->
+        <section class="dashboard-tab" id="eventsTab">
+            <h2 class="mb-3">Events <span class="text-primary">Manager</span></h2>
+            <button id="addEventBtn" class="btn-primary mb-3">+ Add Event</button>
+            <div id="eventsList"></div>
+            <div class="modal-overlay" id="eventModalOverlay">
+                <div class="modal">
+                    <h2 id="eventModalTitle">Add Event</h2>
+                    <form id="eventForm">
+                        <input type="hidden" id="eventId">
+                        <div class="form-group"><label>Title</label><input id="evTitle" required></div>
+                        <div class="form-group"><label>Description</label><textarea id="evDesc" rows="3"></textarea></div>
+                        <div class="form-group"><label>Date</label><input type="date" id="evDate" required></div>
+                        <div class="form-group"><label>Image (optional)</label><input type="file" id="evImage" accept="image/*"></div>
+                        <button type="submit" class="btn-primary">Save</button>
+                        <button type="button" class="btn-sm close-modal">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Tab (unchanged) -->
+        <section class="dashboard-tab" id="programsTab">
+            <h2 class="mb-3">Programs <span class="text-primary">Manager</span></h2>
+            <button id="addProgramBtn" class="btn-primary mb-3">+ Add Program</button>
+            <div id="programsList"></div>
+            <div class="modal-overlay" id="programModalOverlay">
+                <div class="modal">
+                    <h2 id="programModalTitle">Add Program</h2>
+                    <form id="programForm">
+                        <input type="hidden" id="programId">
+                        <div class="form-group"><label>Title</label><input id="progTitle" required></div>
+                        <div class="form-group"><label>Category</label><select id="progCategory"><option>Foundation</option><option>Academic Excellence</option><option>Senior Secondary</option><option>Competitive</option><option>Future Skills</option></select></div>
+                        <div class="form-group"><label>Description</label><textarea id="progDesc" rows="3"></textarea></div>
+                        <div class="form-group"><label>Features (comma separated)</label><input id="progFeatures"></div>
+                        <div class="form-group"><label>Image URL (optional)</label><input id="progImage"></div>
+                        <button type="submit" class="btn-primary">Save</button>
+                        <button type="button" class="btn-sm close-modal">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Tab (unchanged) -->
+        <section class="dashboard-tab" id="analyticsTab">
+            <h2 class="mb-3">AI <span class="text-primary">Analytics</span></h2>
+            <div class="card" style="padding: 2rem; text-align: center;">
+                <p>Advanced analytics will be available in the next update. Stay tuned!</p>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="/assets/app.js?v=10"></script>
+<script src="/assets/admin-results.js?v=1"></script>
+    <script src="/assets/site-upgrade.js?v=1"></script>
+</body>
+</html>
